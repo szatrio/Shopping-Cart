@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Row, Col, Tooltip, OverlayTrigger} from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 
 let styles = {
     pickupSavings: {
@@ -7,28 +7,22 @@ let styles = {
     },
     totalSavings: {
         color: 'red',
-        fontweight: 800
+        fontWeight: 80
     }
 }
 
+
 export default class pickupSavings extends Component {
-    render() {
-            <Tooltip>
-                <p>
-                        Picking up your order in the store helps out costs, and we pass the savings on to you.
-                </p>
-            </Tooltip>
+    render() { 
         return (
             <div>
                 <Row className="show-grid">
                     <Col md={6}>
-                        <OverlayTrigger placement="button" overlay={tooltip}>
-                            <div style={style.pickupSavings}>
+                            <div style={styles.pickupSavings}>
                                 Pickup Savings
                             </div>
-                        </OverlayTrigger>
                     </Col>
-                    <Col style={style.totalSavings}md={6}>
+                    <Col style={styles.totalSavings}md={6}>
                         {`Rp${this.props.price}`}
                     </Col>
                 </Row>
