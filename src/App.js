@@ -35,6 +35,7 @@ class App extends Component {
   }
 
   giveDiscountHandler(){
+    console.log(this.props.promoCode,"ini promo code yang diketik")
     if(this.props.promoCode === 'DISCOUNT'){
       this.setState({
         estimatedTotal: this.state.estimatedTotal * 0.9
@@ -47,6 +48,7 @@ class App extends Component {
 
   render(){
     console.log(this.state,"ini state")
+    console.log(this.props, "ini props dari app js")
     return (
       <div>
         <h1 className="container">
@@ -70,7 +72,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  promoCode: state.promoCode.value
+  promoCode: state.promoCodex.value
 })
 
 export default connect(mapStateToProps, { handleChange })(App);

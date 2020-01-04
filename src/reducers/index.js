@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import promoCodeRuducer from './promoCodeReducer'
+import promoCodeReducer from './promoCodeReducer'
 
 export default combineReducers({
-    promoCode: promoCodeRuducer
+    promoCodex: promoCodeReducer
 })

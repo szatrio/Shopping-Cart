@@ -29,6 +29,7 @@ class promoCode extends Component {
     }
 
     render() {
+        console.log(this.props, "ini props promocode jsx")
         return (
             <div>
                 <Button 
@@ -80,7 +81,7 @@ class promoCode extends Component {
 }
 
 const mapStateToProps = state => ({
-    promoCode: state.promoCode.value
+    promoCode: state.promoCodex.value
 })
 
 export default connect(mapStateToProps, {handleChange})(promoCode)
